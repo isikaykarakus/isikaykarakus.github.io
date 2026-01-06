@@ -7,184 +7,73 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="/" class="logo">Your Name</a>
-            <ul class="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="about" class="hero">
-        <div class="hero-content">
-            <img src="https://via.placeholder.com/150" alt="Profile" class="profile-image">
-            <h1>Your Name</h1>
-            <p class="subtitle">Software Engineer & Full Stack Developer</p>
-            <p class="bio">Passionate about building scalable systems and solving complex problems. Specializing in web development and creating exceptional digital experiences.</p>
-            
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="https://github.com" target="_blank" class="social-link">GitHub</a>
-                <a href="https://linkedin.com" target="_blank" class="social-link">LinkedIn</a>
-                <a href="https://twitter.com" target="_blank" class="social-link">Twitter</a>
-                <a href="mailto:your.email@example.com" class="social-link">Email</a>
+    <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <img src="https://via.placeholder.com/200" alt="Profile" class="profile-image">
+                <h1 class="name">Your Name</h1>
+                <p class="title">Software Engineer & Full Stack Developer</p>
             </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="about-detailed">
-        <div class="container">
-            <h2>About Me 👋</h2>
-            <p>I'm a passionate software engineer with expertise in full-stack development. I enjoy building scalable, user-friendly applications and continuously learning new technologies.</p>
-            
-            <h3>Personal Interests</h3>
-            <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying outdoor activities.</p>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-list">
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Senior Software Engineer</h3>
-                        <span class="exp-company">Tech Company</span>
-                    </div>
-                    <p class="exp-duration">2022 - Present</p>
-                    <p class="exp-description">Led development of scalable microservices architecture, improved system performance by 40%, and mentored junior developers.</p>
-                </div>
+            <!-- About Me Section -->
+            <section class="section">
+                <h2>About Me 👋</h2>
+                <p>Passionate about building scalable systems and solving complex problems. Specializing in distributed systems, and high-performance applications.</p>
                 
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Full Stack Developer</h3>
-                        <span class="exp-company">Previous Company</span>
-                    </div>
-                    <p class="exp-duration">2020 - 2022</p>
-                    <p class="exp-description">Built responsive web applications using React and Node.js, collaborated with cross-functional teams, and delivered features on schedule.</p>
-                </div>
+                <p>Graduated from University in Computer Science with a strong background in full-stack development.</p>
                 
-                <div class="experience-item">
-                    <div class="exp-header">
-                        <h3>Junior Developer</h3>
-                        <span class="exp-company">Startup</span>
-                    </div>
-                    <p class="exp-duration">2019 - 2020</p>
-                    <p class="exp-description">Developed web applications, fixed bugs, and learned best practices in software development and team collaboration.</p>
+                <p>Currently working as a Software Engineer, specializing in designing and building scalable, high-performance applications. Skilled in addressing complex challenges in web development and database management while ensuring reliability and efficiency. Actively contributes to open-source projects and explores emerging technologies.</p>
+            </section>
+
+            <!-- Personal Interests Section -->
+            <section class="section">
+                <h2>Personal Interests</h2>
+                <p>I enjoy exploring new technologies, contributing to open-source projects, traveling to different places, and spending time on creative projects.</p>
+            </section>
+
+            <!-- Get In Touch Section -->
+            <section class="section get-in-touch">
+                <h2>Get In Touch</h2>
+                <div class="social-grid">
+                    <a href="https://github.com" target="_blank" class="social-item">
+                        <span class="social-label">GitHub</span>
+                        <span class="social-desc">View my open-source projects</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-item">
+                        <span class="social-label">LinkedIn</span>
+                        <span class="social-desc">Connect with me professionally</span>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-item">
+                        <span class="social-label">Twitter</span>
+                        <span class="social-desc">Follow my thoughts and updates</span>
+                    </a>
+                    <a href="mailto:your.email@example.com" class="social-item">
+                        <span class="social-label">Email</span>
+                        <span class="social-desc">Send me a message</span>
+                    </a>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Project One</h3>
-                    <p class="project-desc">A brief description of your first project. Explain what it does and what technologies you used.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Project</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
+            <!-- Additional Links Section -->
+            <section class="section additional-links">
+                <h2>Additional Links</h2>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="photography.html">Photography</a></li>
+                </ul>
+            </section>
+        </main>
 
-                <div class="project-card">
-                    <h3>Project Two</h3>
-                    <p class="project-desc">A brief description of your second project. Highlight the key features and impact.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Project</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Project Three</h3>
-                    <p class="project-desc">A brief description of your third project. Share what you learned and achieved.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Next.js</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Firebase</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" target="_blank">View Project</a>
-                        <a href="#" target="_blank">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Articles Section -->
-    <section id="articles" class="articles">
-        <div class="container">
-            <h2>Articles & Blog</h2>
-            <div class="articles-list">
-                <article class="article-item">
-                    <h3>Understanding Microservices Architecture</h3>
-                    <p class="article-meta">Published on January 10, 2026</p>
-                    <p class="article-desc">An in-depth guide to building and scaling microservices, including best practices and common pitfalls.</p>
-                    <a href="#" class="read-more">Read Article →</a>
-                </article>
-
-                <article class="article-item">
-                    <h3>Best Practices for React Performance</h3>
-                    <p class="article-meta">Published on December 20, 2025</p>
-                    <p class="article-desc">Tips and techniques to optimize your React applications for better performance and user experience.</p>
-                    <a href="#" class="read-more">Read Article →</a>
-                </article>
-
-                <article class="article-item">
-                    <h3>Getting Started with TypeScript</h3>
-                    <p class="article-meta">Published on December 5, 2025</p>
-                    <p class="article-desc">A beginner-friendly introduction to TypeScript and how it can improve your development workflow.</p>
-                    <a href="#" class="read-more">Read Article →</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="contact-desc">Feel free to reach out to me via email or connect with me on social media.</p>
-            
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-btn">Send an Email</a>
-                <a href="https://github.com" target="_blank" class="contact-link">GitHub</a>
-                <a href="https://linkedin.com" target="_blank" class="contact-link">LinkedIn</a>
-                <a href="https://twitter.com" target="_blank" class="contact-link">Twitter</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
+        <!-- Footer -->
+        <footer class="footer">
             <p>&copy; 2026 Your Name. All rights reserved.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
