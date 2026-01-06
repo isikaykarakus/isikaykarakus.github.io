@@ -5,6 +5,7 @@
 }
 
 :root {
+    /* Dark theme (default) */
     --primary-color: #0f172a;
     --secondary-color: #1e293b;
     --text-color: #e2e8f0;
@@ -12,6 +13,16 @@
     --accent-color: #3b82f6;
     --border-color: #334155;
     --transition: all 0.3s ease;
+}
+
+html.light-theme {
+    /* Light theme */
+    --primary-color: #ffffff;
+    --secondary-color: #f8fafc;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --accent-color: #2563eb;
+    --border-color: #e2e8f0;
 }
 
 html {
@@ -24,6 +35,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     padding: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -34,6 +46,40 @@ a {
 
 a:hover {
     color: #60a5fa;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.theme-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+    transform: rotate(20deg);
 }
 
 /* Container */
@@ -52,6 +98,7 @@ a:hover {
 .profile-section {
     text-align: center;
     margin-bottom: 4rem;
+    margin-top: 2rem;
 }
 
 .profile-image {
@@ -62,6 +109,11 @@ a:hover {
     margin-bottom: 2rem;
     object-fit: cover;
     animation: float 3s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+html.light-theme .profile-image {
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
 }
 
 @keyframes float {
@@ -97,6 +149,7 @@ a:hover {
     color: var(--text-color);
     border-bottom: 2px solid var(--border-color);
     padding-bottom: 0.75rem;
+    transition: var(--transition);
 }
 
 .section p {
@@ -104,6 +157,7 @@ a:hover {
     color: var(--text-muted);
     margin-bottom: 1rem;
     line-height: 1.8;
+    transition: var(--transition);
 }
 
 .section p:last-child {
@@ -149,6 +203,10 @@ a:hover {
     box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
 }
 
+html.light-theme .social-item:hover {
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+}
+
 .social-label {
     font-weight: 700;
     font-size: 1.1rem;
@@ -184,6 +242,10 @@ a:hover {
     background-color: rgba(59, 130, 246, 0.1);
 }
 
+html.light-theme .additional-links li:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
 .additional-links a {
     display: block;
     font-weight: 600;
@@ -196,12 +258,21 @@ a:hover {
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
     margin-top: 4rem;
+    transition: var(--transition);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
         padding: 1rem;
+    }
+
+    .theme-toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
     }
 
     .profile-image {
@@ -237,6 +308,14 @@ a:hover {
 @media (max-width: 480px) {
     body {
         padding: 1rem;
+    }
+
+    .theme-toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 
     .profile-image {

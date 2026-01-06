@@ -1,3 +1,30 @@
+// Theme Switcher
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+
+// Check for saved theme preference or default to dark theme
+const currentTheme = localStorage.getItem('theme') || 'dark';
+if (currentTheme === 'light') {
+    html.classList.add('light-theme');
+    themeToggle.innerHTML = '<span class="theme-icon">☀️</span>';
+} else {
+    html.classList.remove('light-theme');
+    themeToggle.innerHTML = '<span class="theme-icon">🌙</span>';
+}
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+    if (html.classList.contains('light-theme')) {
+        html.classList.remove('light-theme');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.innerHTML = '<span class="theme-icon">🌙</span>';
+    } else {
+        html.classList.add('light-theme');
+        localStorage.setItem('theme', 'light');
+        themeToggle.innerHTML = '<span class="theme-icon">☀️</span>';
+    }
+});
+
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -29,45 +56,7 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Observe all project cards and article items
-document.querySelectorAll('.project-card, .article-item, .experience-item').forEach(el => {
-    el.style.opacity = '0';
+// Observe all sections
+document.querySelectorAll('.section').forEach(el => {
     observer.observe(el);
-});
-
-// Add fade in up animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-`;
-document.head.appendChild(style);
-
-// Active navigation link highlighting
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.style.color = 'var(--text-color)';
-        if (link.getAttribute('href').slice(1) === current) {
-            link.style.color = 'var(--accent-color)';
-        }
-    });
 });
