@@ -3,81 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Işıkay Karakuş - Data Science</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Theme Toggle Button -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="theme-icon">🌙</span>
-    </button>
+    <div class="page-wrapper">
+        <!-- Top Navigation Bar -->
+        <nav class="top-nav">
+            <div class="nav-left">
+                <div class="logo">IK</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">About</a></li>
+                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="articles.html" class="nav-link">Articles</a></li>
+                    <li><a href="photography.html" class="nav-link">Travel & Photography</a></li>
+                </ul>
+            </div>
+            <button id="themeToggle" class="theme-toggle"></button>
+        </nav>
 
-    <div class="container">
         <!-- Main Content -->
         <main class="main-content">
             <!-- Profile Section -->
-            <div class="profile-section">
-                <img src="https://via.placeholder.com/200" alt="Profile" class="profile-image">
+            <section class="section profile-section">
                 <h1 class="name">Işıkay Karakuş</h1>
                 <p class="title">Data Science Enthusiast</p>
-            </div>
+                <p class="profile-bio">Welcome to my portfolio. I'm passionate about data science, machine learning, and solving real-world problems through data-driven insights. Currently pursuing my master's degree in AI and exploring innovative approaches to data analysis.</p>
+            </section>
 
             <!-- About Me Section -->
             <section class="section">
-                <h2>About Me 👋</h2>
-                <p>I am a Data Science enthusiast with a Master's degree from the Università degli Studi di Padova and a Bachelor's degree in Mathematics from Hacettepe University.</p>
-                
-                <p>I have a solid foundation in data-driven methodologies and statistical analysis, with hands-on experience in building predictive models and uncovering insights from complex datasets.</p>
-                
-                <p>I learn new concepts quickly, enjoy solving problems, and have a passion for research. I thrive in both independent and team environments, always bringing positive energy, motivation, and enthusiasm to my work.</p>
+                <h2>About Me</h2>
+                <p>I'm a Data Science enthusiast with a strong foundation in mathematics and computer science. I have experience in machine learning, time series forecasting, and data analysis. My journey in data science started with a curiosity about how data can reveal hidden patterns and drive meaningful decisions.</p>
+                <p>I enjoy working on challenging problems that require combining statistical knowledge with programming skills. When I'm not working with data, you might find me exploring new places or capturing moments through photography.</p>
             </section>
 
-            <!-- Personal Interests Section -->
+            <!-- Education Section -->
             <section class="section">
-                <h2>Personal Interests 📸</h2>
-                <p>Beyond tech, I'm a backpacker and photographer. I find joy in capturing moments through my lens and exploring new places. I thrive on discovering new cultures and perspectives around the world.</p>
-                <p>Feel free to explore my photography on Instagram: <a href="https://www.instagram.com/skysclick" target="_blank">@skysclick</a></p>
+                <h2>Education</h2>
+                <div class="education-item">
+                    <div class="degree">Master's in AI</div>
+                    <div class="school">Università Degli Studi Di Padova, Italy</div>
+                    <div class="dates">October 2022 - July 2025</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Bachelor's in Computer Engineering</div>
+                    <div class="school">Hacettepe University, Turkey</div>
+                    <div class="dates">September 2015 - January 2021</div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="section">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-group">
+                        <h3>Programming & Tools</h3>
+                        <p>Python, R, SQL, Git, Jupyter, VS Code</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Machine Learning</h3>
+                        <p>Supervised Learning, Unsupervised Learning, Deep Learning, Model Optimization</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Libraries & Frameworks</h3>
+                        <p>scikit-learn, TensorFlow, PyTorch, Pandas, NumPy, Matplotlib, Seaborn</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Data Analysis</h3>
+                        <p>Statistical Analysis, Time Series Forecasting, Data Visualization, EDA</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Time Series</h3>
+                        <p>ARIMA, Prophet, LSTM, Forecasting, Trend Analysis</p>
+                    </div>
+                    <div class="skill-group">
+                        <h3>Languages</h3>
+                        <p>Turkish (Native), English (Fluent), Italian (Conversational), Spanish (Basic)</p>
+                    </div>
+                </div>
             </section>
 
             <!-- Get In Touch Section -->
             <section class="section get-in-touch">
-                <h2>Get In Touch 🐣</h2>
+                <h2>Get In Touch</h2>
                 <div class="social-grid">
-                    <a href="https://github.com/isikaykarakus" target="_blank" class="social-item">
-                        <span class="social-label">GitHub</span>
-                        <span class="social-desc">View my repositories</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/isikaykarakus" target="_blank" class="social-item">
-                        <span class="social-label">LinkedIn</span>
-                        <span class="social-desc">Connect with me professionally</span>
-                    </a>
-                    <a href="https://www.x.com/isikaykarakus" target="_blank" class="social-item">
-                        <span class="social-label">Twitter</span>
-                        <span class="social-desc">Follow my thoughts</span>
-                    </a>
-                    <a href="mailto:isikaykarakus@gmail.com" class="social-item">
-                        <span class="social-label">Email</span>
-                        <span class="social-desc">isikaykarakus@gmail.com</span>
-                    </a>
+                    <div class="social-item">
+                        <div class="social-label">Email</div>
+                        <div class="social-desc"><a href="mailto:isikaykarakus@gmail.com">isikaykarakus@gmail.com</a></div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-label">LinkedIn</div>
+                        <div class="social-desc"><a href="https://linkedin.com/in/isikaykarakus" target="_blank">linkedin.com/in/isikaykarakus</a></div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-label">GitHub</div>
+                        <div class="social-desc"><a href="https://github.com/isikaykarakus" target="_blank">github.com/isikaykarakus</a></div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-label">Instagram</div>
+                        <div class="social-desc"><a href="https://instagram.com/isikaykarakus" target="_blank">@isikaykarakus</a></div>
+                    </div>
                 </div>
-            </section>
-
-            <!-- Additional Links Section -->
-            <section class="section additional-links">
-                <h2>Additional Links</h2>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                    <li><a href="photography.html">Photography</a></li>
-                </ul>
             </section>
         </main>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2026 Işıkay Karakuş. All rights reserved.</p>
+            <p>&copy; 2024 Işıkay Karakuş. All rights reserved.</p>
         </footer>
     </div>
 
