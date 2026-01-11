@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Işıkay Karakuş - Data Science</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="page-wrapper">
         <!-- Top Navigation Bar -->
         <nav class="top-nav">
             <div class="nav-left">
-                <div class="logo">IK</div>
+                <a href="index.html" class="logo">IK</a>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">About</a></li>
                     <li><a href="experience.html" class="nav-link">Experience</a></li>
@@ -27,83 +28,45 @@
         <main class="main-content">
             <!-- Profile Section -->
             <section class="section profile-section">
-                <h1 class="name">Işıkay Karakuş</h1>
-                <p class="title">Data Science Enthusiast</p>
-                <p class="profile-bio">Welcome to my portfolio. I'm passionate about data science, machine learning, and solving real-world problems through data-driven insights. Currently pursuing my master's degree in AI and exploring innovative approaches to data analysis.</p>
+                <div class="profile-header">
+                    <div class="profile-photo">
+                        <img src="pic.png" alt="Işıkay Karakuş" class="photo">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="name">Işıkay Karakuş</h1>
+                        <p class="title">AI & Data Science Professional</p>
+                    </div>
+                </div>
+
+                <!-- Social Icons Only -->
+                <div class="social-icons">
+                    <a href="mailto:isikaykarakus@gmail.com" class="icon-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/isikaykarakus" target="_blank" class="icon-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/isikaykarakus" target="_blank" class="icon-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://instagram.com/isikaykarakus" target="_blank" class="icon-link" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
             </section>
 
-            <!-- About Me Section -->
-            <section class="section">
+            <!-- About Me Section (user-provided content + light design) -->
+            <section class="section about-section">
                 <h2>About Me</h2>
-                <p>I'm a Data Science enthusiast with a strong foundation in mathematics and computer science. I have experience in machine learning, time series forecasting, and data analysis. My journey in data science started with a curiosity about how data can reveal hidden patterns and drive meaningful decisions.</p>
-                <p>I enjoy working on challenging problems that require combining statistical knowledge with programming skills. When I'm not working with data, you might find me exploring new places or capturing moments through photography.</p>
-            </section>
+                <div class="about-grid">
+                    <div class="about-main">
+                        <p>I build scalable AI systems and solve complex problems through machine learning and data science, with a focus on NLP, computer vision, and time series analysis. I enjoy turning research ideas into end-to-end ML solutions that create real-world impact.</p>
 
-            <!-- Education Section -->
-            <section class="section">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <div class="degree">Master's in AI</div>
-                    <div class="school">Università Degli Studi Di Padova, Italy</div>
-                    <div class="dates">October 2022 - July 2025</div>
-                </div>
-                <div class="education-item">
-                    <div class="degree">Bachelor's in Computer Engineering</div>
-                    <div class="school">Hacettepe University, Turkey</div>
-                    <div class="dates">September 2015 - January 2021</div>
-                </div>
-            </section>
+                        <p>I hold a BSc in Mathematics (Honours) from Hacettepe University and an MSc in Data Science from Università degli Studi di Padova. I’ve worked as an AI Intern at FOREO, where I developed multimodal translation systems and scalable backend services, gaining hands-on experience with distributed systems and production ML pipelines.</p>
 
-            <!-- Skills Section -->
-            <section class="section">
-                <h2>Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-group">
-                        <h3>Programming & Tools</h3>
-                        <p>Python, R, SQL, Git, Jupyter, VS Code</p>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Machine Learning</h3>
-                        <p>Supervised Learning, Unsupervised Learning, Deep Learning, Model Optimization</p>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Libraries & Frameworks</h3>
-                        <p>scikit-learn, TensorFlow, PyTorch, Pandas, NumPy, Matplotlib, Seaborn</p>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Data Analysis</h3>
-                        <p>Statistical Analysis, Time Series Forecasting, Data Visualization, EDA</p>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Time Series</h3>
-                        <p>ARIMA, Prophet, LSTM, Forecasting, Trend Analysis</p>
-                    </div>
-                    <div class="skill-group">
-                        <h3>Languages</h3>
-                        <p>Turkish (Native), English (Fluent), Italian (Conversational), Spanish (Basic)</p>
-                    </div>
-                </div>
-            </section>
+                        <p>I’m a native Turkish speaker, fluent in English, conversational in Italian, and currently learning Spanish. My technical work centers around Python, using PyTorch, TensorFlow, and Hugging Face Transformers for deep learning and multimodal models, and FastAPI, Scikit-learn, and XGBoost for building production-ready ML pipelines.</p>
 
-            <!-- Get In Touch Section -->
-            <section class="section get-in-touch">
-                <h2>Get In Touch</h2>
-                <div class="social-grid">
-                    <div class="social-item">
-                        <div class="social-label">Email</div>
-                        <div class="social-desc"><a href="mailto:isikaykarakus@gmail.com">isikaykarakus@gmail.com</a></div>
-                    </div>
-                    <div class="social-item">
-                        <div class="social-label">LinkedIn</div>
-                        <div class="social-desc"><a href="https://linkedin.com/in/isikaykarakus" target="_blank">linkedin.com/in/isikaykarakus</a></div>
-                    </div>
-                    <div class="social-item">
-                        <div class="social-label">GitHub</div>
-                        <div class="social-desc"><a href="https://github.com/isikaykarakus" target="_blank">github.com/isikaykarakus</a></div>
-                    </div>
-                    <div class="social-item">
-                        <div class="social-label">Instagram</div>
-                        <div class="social-desc"><a href="https://instagram.com/isikaykarakus" target="_blank">@isikaykarakus</a></div>
+                        <p>Beyond engineering, I’m interested in applying AI to sustainability-focused challenges, particularly in renewable energy and resource optimization. Outside of work, I enjoy photography and travel, drawing inspiration from different cultures and perspectives.</p>
                     </div>
                 </div>
             </section>
@@ -111,7 +74,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2024 Işıkay Karakuş. All rights reserved.</p>
+            <p>&copy; 2025 Işıkay Karakuş. All rights reserved.</p>
         </footer>
     </div>
 

@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Işıkay Karakuş</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="page-wrapper">
         <!-- Top Navigation Bar -->
         <nav class="top-nav">
             <div class="nav-left">
-                <div class="logo">IK</div>
+                <a href="index.html" class="logo">IK</a>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">About</a></li>
                     <li><a href="experience.html" class="nav-link">Experience</a></li>
@@ -29,56 +30,82 @@
                 <h2>Projects</h2>
                 
                 <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>BEV Adoption Forecasting</h3>
-                        <p>Developed a machine learning model to forecast Battery Electric Vehicle adoption rates across different regions. Used time series analysis and ensemble methods to predict future adoption trends with high accuracy.</p>
+                    <a href="https://github.com/isikaykarakus" class="project-card" target="_blank">
+                        <h3>Peripheral Blood Cell Classification</h3>
+                        <p>Developed a deep learning pipeline to classify peripheral blood cell types using custom CNN architectures, including U-Net and Inception. Focused on model accuracy, class imbalance handling, and medical image interpretation.</p>
                         <div class="project-skills">
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">CNNs</span>
+                            <span class="skill-tag">TensorFlow</span>
+                            <span class="skill-tag">Medical Imaging</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/isikaykarakus" class="project-card" target="_blank">
+                        <h3>Semantic Segmentation of Aerial Images</h3>
+                        <p>Developed and compared U-Net and SegNet models for pixel-wise segmentation of satellite imagery. Focused on spatial accuracy, efficient training, and class-wise evaluation.</p>
+                        <div class="project-skills">
+                            <span class="skill-tag">Computer Vision</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">Semantic Segmentation</span>
+                            <span class="skill-tag">U-Net</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/isikaykarakus" class="project-card" target="_blank">
+                        <h3>LLM Lie Detection</h3>
+                        <p>Fine-tuned MiniLM using LoRA and Hugging Face Transformers for deceptive detection. Explored behavioural detection and parameter-efficient training strategies to improve interpretability and model performance.</p>
+                        <div class="project-skills">
+                            <span class="skill-tag">LLM Fine-Tuning</span>
+                            <span class="skill-tag">Hugging Face</span>
+                            <span class="skill-tag">PyTorch</span>
+                            <span class="skill-tag">LoRA</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/isikaykarakus" class="project-card" target="_blank">
+                        <h3>Turkish Emotion Classifier</h3>
+                        <p>Designed and deployed a real-time NLP app for Turkish emotion detection. Covered end-to-end development from preprocessing to deployment using Streamlit.</p>
+                        <div class="project-skills">
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Streamlit</span>
+                            <span class="skill-tag">Scikit-learn</span>
                             <span class="skill-tag">Python</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/isikaykarakus" class="project-card" target="_blank">
+                        <h3>BEV Adoption Forecasting</h3>
+                        <p>Built forecasting models to analyze Battery Electric Vehicle adoption under varying policy scenarios using ARIMA, Prophet, XGBoost, LightGBM and LSTM.</p>
+                        <div class="project-skills">
                             <span class="skill-tag">Time Series</span>
                             <span class="skill-tag">Prophet</span>
-                            <span class="skill-tag">Pandas</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>Wheat Price Prediction</h3>
-                        <p>Built a predictive model for wheat prices using historical data and multiple machine learning algorithms. Implemented feature engineering and model optimization to improve prediction accuracy for agricultural forecasting.</p>
-                        <div class="project-skills">
+                            <span class="skill-tag">XGBoost</span>
                             <span class="skill-tag">Python</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/isikaykarakus" class="project-card" target="_blank">
+                        <h3>Wheat Price Prediction</h3>
+                        <p>Built a predictive model for wheat prices using historical data and multiple machine learning algorithms. Implemented feature engineering and model optimization for agricultural forecasting.</p>
+                        <div class="project-skills">
                             <span class="skill-tag">Regression</span>
                             <span class="skill-tag">Scikit-learn</span>
                             <span class="skill-tag">EDA</span>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <h3>LLM Lie Detection</h3>
-                        <p>Developed a system to detect false statements in text generated by Large Language Models. Used natural language processing techniques and classification models to identify potential inconsistencies and contradictions.</p>
-                        <div class="project-skills">
-                            <span class="skill-tag">NLP</span>
                             <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Deep Learning</span>
-                            <span class="skill-tag">Classification</span>
                         </div>
-                    </div>
+                    </a>
+                </div>
 
-                    <div class="project-card">
-                        <h3>Turkish Emotion Classifier</h3>
-                        <p>Created a machine learning classifier to detect emotions in Turkish text. Implemented sentiment analysis using neural networks and word embeddings to classify text into different emotional categories.</p>
-                        <div class="project-skills">
-                            <span class="skill-tag">NLP</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Neural Networks</span>
-                            <span class="skill-tag">Text Classification</span>
-                        </div>
-                    </div>
+                <div style="margin-top: 3rem; text-align: center;">
+                    <p style="color: var(--text-secondary);">To view more projects, please visit <a href="https://github.com/isikaykarakus" target="_blank" style="color: var(--accent-primary); font-weight: 600;">my GitHub profile</a></p>
                 </div>
             </section>
         </main>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2024 Işıkay Karakuş. All rights reserved.</p>
+            <p>&copy; 2026 Işıkay Karakuş. All rights reserved.</p>
         </footer>
     </div>
 
