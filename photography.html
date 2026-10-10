@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel & Photography - Işıkay Karakuş</title>
+
+    <title>Travel & Photography | Işıkay Karakuş</title>
+
+    <meta
+        name="description"
+        content="Travel and photography by Işıkay Karakuş — a collection of places, cultures, landscapes, and everyday moments."
+    >
+
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome for Instagram icon -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    >
 </head>
+
 <body>
     <div class="page-wrapper">
+
         <!-- Top Navigation Bar -->
         <nav class="top-nav">
             <div class="nav-left">
-                <div class="logo">IK</div>
+
+                <a href="index.html" class="logo">IK</a>
+
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">About</a></li>
                     <li><a href="experience.html" class="nav-link">Experience</a></li>
@@ -19,34 +36,91 @@
                     <li><a href="articles.html" class="nav-link">Articles</a></li>
                     <li><a href="photography.html" class="nav-link">Travel & Photography</a></li>
                 </ul>
+
             </div>
+
             <button id="themeToggle" class="theme-toggle"></button>
         </nav>
 
+
         <!-- Main Content -->
         <main class="main-content">
-            <section class="section">
+
+            <section class="section photography-section">
+
                 <h2>Travel & Photography</h2>
-                <p>Beyond data science, I love exploring new places and capturing moments through photography. Travel has taught me to appreciate different cultures and perspectives, which often influences my approach to problem-solving.</p>
-                
-                <div style="margin-top: 2rem; padding: 1.5rem; background-color: var(--secondary-color); border-radius: 0.5rem; border-left: 4px solid var(--accent-color);">
-                    <h3 style="margin-bottom: 0.5rem;">Coming Soon</h3>
-                    <p style="color: var(--text-muted);">I'm currently building a gallery of my travel photos and experiences. Check back soon for stunning photography from my adventures across different countries and regions.</p>
+
+                <div class="photography-intro">
+
+                    <p>
+                        Outside of machine learning, photography and travel are two
+                        things I genuinely enjoy. I love exploring new places,
+                        discovering different cultures, and capturing the small details,
+                        landscapes, architecture, and everyday moments that make each
+                        place distinctive.
+                    </p>
+
+                    <p>
+                        Having lived and studied in different countries has made travel
+                        an important part of my life. Photography gives me a way to
+                        document those experiences and preserve the places and moments
+                        that catch my attention along the way.
+                    </p>
+
                 </div>
 
-                <div style="margin-top: 2rem;">
-                    <h3>My Travel Interests</h3>
-                    <p>I enjoy exploring historical sites, experiencing local cultures, and capturing the beauty of nature through my camera. My travels have taken me through Italy, Turkey, and beyond, each journey providing unique perspectives and photographic opportunities.</p>
+
+                <!-- Instagram -->
+                <div class="instagram-section">
+
+                    <h3>Photography & Travel</h3>
+
+                    <p>
+                        I share photos and moments from my travels on Instagram.
+                    </p>
+
+                    <a
+                        href="https://instagram.com/isikaykarakus"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="instagram-button"
+                    >
+                        <i class="fab fa-instagram"></i>
+                        @isikaykarakus
+                    </a>
+
                 </div>
+
+
+                <!-- Travel Interests -->
+                <div class="travel-interests">
+
+                    <h3>What I Like to Capture</h3>
+
+                    <div class="travel-tags">
+                        <span class="travel-tag">Architecture</span>
+                        <span class="travel-tag">Landscapes</span>
+                        <span class="travel-tag">Cities</span>
+                        <span class="travel-tag">Nature</span>
+                        <span class="travel-tag">Culture</span>
+                        <span class="travel-tag">Everyday Moments</span>
+                    </div>
+
+                </div>
+
             </section>
+
         </main>
+
 
         <!-- Footer -->
         <footer class="footer">
             <p>&copy; 2026 Işıkay Karakuş. All rights reserved.</p>
         </footer>
+
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
