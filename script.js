@@ -16,3 +16,27 @@
     try { localStorage.setItem('portfolio-theme', next); } catch (_) {}
   });
 })();
+// Rotating "I work on" text
+const workRotating = document.getElementById("workRotating");
+
+if (workRotating) {
+  const workAreas = [
+    "Deep Learning",
+    "Natural Language Processing",
+    "Transformer Models",
+    "Model Fine-Tuning",
+    "Machine Learning Systems"
+  ];
+
+  let workIndex = 0;
+
+  setInterval(() => {
+    workRotating.style.opacity = "0";
+
+    setTimeout(() => {
+      workIndex = (workIndex + 1) % workAreas.length;
+      workRotating.textContent = workAreas[workIndex];
+      workRotating.style.opacity = "1";
+    }, 250);
+  }, 2200);
+}
