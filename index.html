@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Işıkay Karakuş — Machine Learning Engineer in Barcelona. Deep learning, NLP, model evaluation and ML systems.">
   <title>Işıkay Karakuş — Machine Learning Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,11 +27,11 @@
       <div class="hero-copy">
         <p class="eyebrow"><span class="pulse" aria-hidden="true"></span> BARCELONA · MACHINE LEARNING ENGINEER</p>
         <h1>A little curiosity.<br><em>A lot of learning.</em></h1>
-        <p class="hero-lead">I'm <strong class="hero-name">Işıkay Karakuş</strong>, an ML Engineer with a background in mathematics and data science. I bring mathematical curiosity to deep learning, NLP and the craft of building useful ML systems.</p>
+        <p class="hero-lead">I'm <strong class="hero-name"><em>Işıkay Karakuş</em></strong>, an ML Engineer with a background in mathematics and data science. I bring mathematical curiosity to deep learning, NLP and the craft of building useful ML systems.</p>
         <div class="work-on" aria-label="Areas I work on">
           <span class="work-label">I work on</span>
-          <span class="work-rotating" id="workRotating">Deep Learning</span>
-          <span class="typing-cursor" aria-hidden="true">|</span>
+          <span class="work-typing" aria-hidden="true"><span class="work-rotating" id="workRotating">Deep Learning</span><span class="typing-cursor">|</span></span>
+          <span class="sr-only">Deep Learning, Natural Language Processing, Transformer Models, Model Fine-Tuning, and Machine Learning Systems</span>
         </div>
         <div class="actions">
           <a class="button primary" href="#work">Explore projects</a>
@@ -41,7 +42,6 @@
       <div class="hero-art hero-photo">
         <img src="isikay-portrait.png" alt="Portrait of Işıkay Karakuş" class="hero-portrait">
         <div class="portrait-wash" aria-hidden="true"></div>
-        <div class="portrait-label">ML · NLP · DEEP LEARNING</div>
       </div>
     </section>
 
@@ -74,7 +74,7 @@
         </article>
 
         <article class="project-card">
-          <div class="project-visual project-image"><img src="realimagevsmask.png" alt="Satellite image alongside its semantic segmentation mask" loading="lazy" decoding="async"></div>
+          <div class="project-visual project-image satellite-comparison"><img src="realimagevsmask.png" alt="Satellite image alongside its semantic segmentation mask" loading="lazy" decoding="async"><img src="realimagevsmask.png" alt="" aria-hidden="true" loading="lazy" decoding="async"></div>
           <div class="project-body">
             <div class="project-index">03 <span>COMPUTER VISION</span></div>
             <h3>Satellite Image Segmentation</h3>
@@ -85,18 +85,18 @@
         </article>
 
         <article class="project-card">
-          <div class="project-visual project-visual-typographic project-visual-emotion" role="img" aria-label="Decorative typography representing Turkish emotion classification"><span class="visual-kicker">NATURAL LANGUAGE PROCESSING</span><span class="visual-main">How does<br>text <em>feel?</em></span><span class="visual-bottom">TR · 6 EMOTIONS</span></div>
+          <div class="project-visual project-image"><img src="turkish_emotion.png" alt="Turkish Emotion Classifier project illustration" loading="lazy" decoding="async"></div>
           <div class="project-body">
             <div class="project-index">04 <span>APPLIED NLP</span></div>
             <h3>Turkish Emotion Classifier</h3>
             <p>Built a Turkish text emotion classifier using a logistic-regression baseline and the TREMO dataset, from preprocessing and feature extraction to a Streamlit application.</p>
             <div class="tags"><span>scikit-learn</span><span>NLP</span><span>Streamlit</span></div>
-            <a class="text-link" href="https://turkishemotionclassifier-isikaykarakus.streamlit.app/" target="_blank" rel="noopener noreferrer">Try live demo ↗</a>
+            <a class="text-link" href="https://turkishemotionclassifier-isikaykarakus.streamlit.app/" target="_blank" rel="noopener noreferrer">Try live demo</a>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="project-visual project-visual-typographic project-visual-logic" role="img" aria-label="Decorative Minesweeper logic grid"><span class="visual-kicker">LOGIC & CONSTRAINT SOLVING</span><span class="logic-grid" aria-hidden="true"><b>1</b><b>2</b><b>1</b><b>?</b><b>2</b><b>✦</b><b>2</b><b>1</b><b>1</b></span><span class="visual-bottom">SAT · MINISAT22</span></div>
+          <div class="project-visual project-image"><img src="minesweeper.png" alt="Minesweeper board with numbered cells and flagged mines" loading="lazy" decoding="async"></div>
           <div class="project-body">
             <div class="project-index">05 <span>SYMBOLIC AI</span></div>
             <h3>Minesweeper SAT Solver</h3>
@@ -115,7 +115,7 @@
         <div class="timeline">
           <article class="timeline-item"><div class="time">2026 — PRESENT</div><div><h3>Machine Learning Engineer</h3><p class="org">IREC · Barcelona, Spain</p><p>Forecasting workflows for energy systems, data pipelines, model benchmarking and ML services using FastAPI, PostgreSQL and Docker for Linux-based deployment.</p></div></article>
           <article class="timeline-item"><div class="time">2025 — 2026</div><div><h3>Artificial Intelligence Engineer Intern</h3><p class="org">FOREO · Stockholm, Sweden</p><p>Multilingual ML application spanning translation, speech and OCR; LoRA-based model adaptation, evaluation and API integration.</p></div></article>
-          <article class="timeline-item"><div class="time">2025</div><div><h3>Data Science Intern</h3><p class="org">University of Padova · Italy</p><p>Benchmarked statistical, ML and deep-learning models for battery electric vehicle adoption forecasting.</p></div></article>
+          <article class="timeline-item"><div class="time">2025</div><div><h3>Data Science Intern</h3><p class="org">University of Padova · Padova, Italy</p><p>Benchmarked statistical, ML and deep-learning models for battery electric vehicle adoption forecasting.</p></div></article>
         </div>
       </div>
     </section>
@@ -126,7 +126,25 @@
         <p>I hold an MSc in Data Science from the University of Padova and a BSc in Mathematics from Hacettepe University. I enjoy exploring how mathematical thinking and careful experimentation can lead to better machine-learning systems.</p>
         <p>My interests include efficient ML, Transformer models, NLP, comparative evaluation and turning research ideas into useful applications.</p>
         <div class="skills"><span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>Transformers</span><span>scikit-learn</span><span>FastAPI</span><span>Docker</span><span>PostgreSQL</span><span>Linux</span><span>Git</span></div>
-        <div class="education"><div><strong>MSc · Data Science</strong><span>University of Padova</span></div><div><strong>BSc · Mathematics</strong><span>Hacettepe University</span></div></div>
+        <div class="education">
+          <div>
+            <strong>MSc · Data Science</strong>
+            <span><a href="https://www.unipd.it/" target="_blank" rel="noopener noreferrer">University of Padova</a> · Padova, Italy</span>
+            <span class="education-date">2022–2025</span>
+            <p>Founded in 1222, one of the world’s oldest universities with more than eight centuries of academic tradition.</p>
+          </div>
+          <div>
+            <strong>BSc · Mathematics</strong>
+            <span><a href="https://www.hacettepe.edu.tr/" target="_blank" rel="noopener noreferrer">Hacettepe University</a> · Ankara, Türkiye</span>
+            <span class="education-date">2015–2021</span>
+            <p>One of Türkiye’s leading research universities, with a strong commitment to scientific discovery.</p>
+          </div>
+          <div>
+            <strong>Erasmus · Mathematics and Computer Science</strong>
+            <span><a href="https://pcz.pl/en/" target="_blank" rel="noopener noreferrer">Politechnika Częstochowska</a> · Częstochowa, Poland</span>
+            <span class="education-date">2019–2020</span>
+          </div>
+        </div>
       </div>
     </section>
 
