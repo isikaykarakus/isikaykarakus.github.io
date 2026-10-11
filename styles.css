@@ -88,3 +88,84 @@ html[data-theme=dark] .portrait-label{background:rgba(25,28,57,.82);color:#c8d2f
 /* Personal photography */
 .personal-photo{overflow:hidden;border-radius:18px;box-shadow:var(--shadow)}
 .personal-photo img{display:block;width:100%;height:auto}
+/* Hero name: editorial italic, consistent with your headings */
+.hero-name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* Rotating specializations */
+.work-on {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: .55rem;
+  margin: 1.35rem 0 1.5rem;
+  min-height: 2rem;
+  font-size: 1.05rem;
+}
+.work-label { font-weight: 700; color: var(--ink); }
+.work-rotating {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--accent);
+  transition: opacity .25s ease;
+}
+.typing-cursor { color: var(--accent); animation: workCursorBlink 1s step-end infinite; }
+@keyframes workCursorBlink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .work-rotating { transition: none; }
+  .typing-cursor { animation: none; }
+}
+
+/* Project visuals made with CSS: no additional image uploads required */
+.project-visual-typographic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.1rem, 2vw, 2rem);
+  overflow: hidden;
+  min-height: 230px;
+  border-radius: inherit;
+}
+.project-visual-emotion { background: linear-gradient(135deg, #e8e4ff, #b5c9ff); color: #26316f; }
+.project-visual-logic { background: linear-gradient(135deg, #dbe9ff, #b7c4f9); color: #293b83; }
+.visual-kicker, .visual-bottom {
+  position: relative;
+  z-index: 1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: .64rem;
+  letter-spacing: .13em;
+}
+.visual-main {
+  position: relative;
+  z-index: 1;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.9rem, 3.5vw, 3.1rem);
+  font-weight: 800;
+  letter-spacing: -.055em;
+  line-height: 1.13;
+}
+.visual-main em { font-family: 'Fraunces', Georgia, serif; font-weight: 500; }
+.logic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 44px);
+  gap: 7px;
+  margin: auto;
+  transform: rotate(-8deg);
+}
+.logic-grid b {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.65);
+  box-shadow: 0 5px 16px rgba(52,74,145,.1);
+  font: 800 1rem 'Plus Jakarta Sans', sans-serif;
+}
