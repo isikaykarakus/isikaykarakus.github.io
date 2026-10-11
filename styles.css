@@ -92,7 +92,7 @@ html[data-theme=dark] .portrait-label{background:rgba(25,28,57,.82);color:#c8d2f
 .hero-name {
   font-family: 'Fraunces', Georgia, serif;
   font-style: italic;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--accent);
 }
 
@@ -169,3 +169,145 @@ html[data-theme=dark] .portrait-label{background:rgba(25,28,57,.82);color:#c8d2f
   box-shadow: 0 5px 16px rgba(52,74,145,.1);
   font: 800 1rem 'Plus Jakarta Sans', sans-serif;
 }
+/* Typing specializations and a single column of project rows */
+.hero-lead .hero-name,.hero-name em{font-weight:700;font-style:italic;color:var(--accent)}
+.work-typing{color:var(--accent);min-width:0;overflow-wrap:anywhere}
+.work-rotating{color:var(--accent);transition:none}
+.typing-cursor{margin-left:2px;color:var(--accent)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.project-grid{grid-template-columns:minmax(0,1fr);gap:0}
+.project-card,.project-card.featured{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:36px;align-items:center;padding:36px 0;background:transparent;border:0;border-bottom:1px solid var(--border);border-radius:0;box-shadow:none}
+.project-card:hover{transform:none;box-shadow:none}
+.project-card:first-child{padding-top:0}
+.project-card .project-visual{height:auto;aspect-ratio:16 / 10;border-radius:14px;min-width:0}
+.project-card .project-body{padding:0;min-width:0}
+.project-body p{min-height:0;margin-bottom:20px}
+@media(max-width:620px){
+  .project-card,.project-card.featured{grid-template-columns:minmax(0,1fr);gap:24px;padding:28px 0}
+  .project-card .project-visual{aspect-ratio:16 / 10}
+  .work-on{min-height:4rem}
+}
+@media(prefers-reduced-motion:reduce){.typing-cursor{display:none}}
+
+/* Compact project images */
+.project-card,.project-card.featured{grid-template-columns:minmax(0,280px) minmax(0,1fr)}
+.project-card .project-visual{width:100%;max-width:280px}
+@media(max-width:620px){
+  .project-card,.project-card.featured{grid-template-columns:minmax(0,1fr);gap:20px}
+  .project-card .project-visual{max-width:240px}
+}
+/* Reveal each content block once as it enters the viewport. */
+.scroll-reveal{opacity:0;translate:0 42px;transition:opacity 1s ease,translate 1s cubic-bezier(.22,1,.36,1)}
+.scroll-reveal.is-visible{opacity:1;translate:0 0}
+@media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;translate:none;transition:none}}
+@media print{.scroll-reveal{opacity:1;translate:none}}
+
+/* Fine blue-purple wave contours add depth behind the content. */
+body{background-image:url('background-waves.svg');background-size:1440px 900px;background-position:center top;background-repeat:repeat-y}
+.section-tinted{background-image:url('background-waves.svg');background-size:1440px 900px;background-position:center center;background-repeat:repeat-y}
+@media(max-width:620px){
+  body,.section-tinted{background-size:900px 650px}
+  .scroll-reveal{translate:0 30px}
+  .scroll-reveal.is-visible{translate:0 0}
+}
+@media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;translate:none;transition:none}}
+@media print{body,.section-tinted{background-image:none}.scroll-reveal{opacity:1;translate:none}}
+
+/* Fit project artwork to its original proportions without padded frames. */
+.project-card .project-visual.project-image{
+  height:auto;
+  min-height:0;
+  aspect-ratio:auto;
+  padding:0;
+  display:block;
+  background:transparent;
+}
+.project-card .project-image img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+
+/* A taller satellite comparison and one continuous background layer. */
+.project-card .project-visual.project-image.satellite-comparison{display:grid;gap:0;padding:6px;background:#fff;border-radius:14px;overflow:hidden}
+.satellite-comparison img{border-radius:0}
+body{position:relative;isolation:isolate;background-image:none}
+body:before{
+  content:'';
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:url('background-waves.svg') center center / cover no-repeat;
+  opacity:.7;
+}
+.section-tinted{
+  background-image:none;
+  background-color:transparent;
+  position:relative;
+  isolation:isolate;
+}
+.section-tinted:before{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(to bottom,transparent,color-mix(in srgb,var(--surface2) 65%,transparent) 20%,color-mix(in srgb,var(--surface2) 65%,transparent) 80%,transparent);
+}
+@media print{body:before,.section-tinted:before{display:none}}
+
+/* Gentle colour changes distinguish sections while preserving the waves. */
+body{overflow-x:clip}
+main > section{position:relative;isolation:isolate;--section-tint:rgba(101,121,221,.035)}
+main > section:nth-child(even){--section-tint:rgba(154,123,216,.045)}
+html[data-theme=dark] main > section{--section-tint:rgba(101,121,221,.055)}
+html[data-theme=dark] main > section:nth-child(even){--section-tint:rgba(154,123,216,.065)}
+main > section:before{
+  content:'';
+  position:absolute;
+  inset:0 calc((100% - 100vw) / 2);
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(to bottom,transparent,var(--section-tint) 12%,var(--section-tint) 88%,transparent);
+}
+@media print{main > section:before{display:none}}
+
+/* Matching dimensions for all project artwork. */
+.project-card .project-visual.project-image{
+  width:100%;max-width:280px;height:auto;aspect-ratio:7 / 5;
+  padding:0;background:transparent;border-radius:14px;
+  display:grid;grid-template-rows:minmax(0,1fr);overflow:hidden;
+}
+.project-card .project-image img{width:100%;height:100%;min-height:0;min-width:0;object-fit:cover}
+.project-card .project-image-cover{padding:0;background:#071924}
+.project-card .project-image-cover img{object-fit:cover}
+.project-card .project-visual.project-image.satellite-comparison{
+  display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:0;
+  padding:0;background:transparent;border-radius:14px;aspect-ratio:7 / 5;
+}
+@media(max-width:620px){.project-card .project-visual.project-image{max-width:240px}}
+/* Education entries with room for institutional context. */
+.education > div{display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:20px 0}
+.education strong{color:var(--ink)}
+.education p{margin:2px 0 0;color:var(--muted);font-size:.8rem;line-height:1.65;max-width:540px}
+.education .education-date{color:var(--accent);font-size:.75rem;font-weight:700}
+
+.education a{color:var(--accent);text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--accent) 35%,transparent);text-underline-offset:3px}
+.education a:hover{ text-decoration-color:var(--accent)}
+
+/* A little star follows the mouse on devices with a precise pointer. */
+@media(hover:hover) and (pointer:fine){
+  html,body{cursor:url('star-cursor.svg') 9 9,auto}
+  a,button,[role="button"]{cursor:url('star-cursor.svg') 9 9,pointer}
+}
+
+/* One sparkle, coloured to match each theme. */
+@media(hover:hover) and (pointer:fine){
+  html[data-theme=dark],html[data-theme=dark] body{cursor:url('star-cursor-dark.svg') 9 9,auto}
+  html[data-theme=dark] a,html[data-theme=dark] button,html[data-theme=dark] [role="button"]{cursor:url('star-cursor-dark.svg') 9 9,pointer}
+}
+.cursor-dust{position:fixed;z-index:100;pointer-events:none;width:3px;height:3px;border-radius:50%;background:var(--accent);box-shadow:0 0 5px color-mix(in srgb,var(--accent) 65%,transparent);opacity:0;animation:cursorDustFade .8s ease-out forwards}
+@keyframes cursorDustFade{0%{opacity:.8;transform:translate(-50%,-50%)}100%{opacity:0;transform:translate(-50%,10px) scale(.3)}}
+@media(prefers-reduced-motion:reduce){.cursor-dust{display:none}}
